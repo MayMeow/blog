@@ -1,6 +1,4 @@
-using System;
-
-namespace MayMeow.Blog.Web.Models
+﻿namespace MayMeow.Blog.Entities.Errors
 {
     public class ErrorViewModel
     {

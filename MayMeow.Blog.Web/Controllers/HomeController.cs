@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using MayMeow.Blog.Entities.Errors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using MayMeow.Blog.Web.Models;
 
 namespace MayMeow.Blog.Web.Controllers
 {
