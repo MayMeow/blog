@@ -1,0 +1,19 @@
+﻿@model List<MayMeow.Blog.Entities.Taxonomy.Label>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Labels</h2>
+
+<table class="table">
+    @foreach (var label in Model)
+    {
+        <tr>
+            <td>
+                <span class="badge p-2 @label.Color">@label.Name</span>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,19 @@
+﻿@model List<MayMeow.Blog.Entities.Content.Node>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>All Nodes</h2>
+
+<table class="table">
+    @foreach (var node in Model)
+    {
+        <tr>
+            <td class="font-weight-bold">@node.Title</td>
+            <td>@node.CreatedAt</td>
+            <td><a asp-action="Details" asp-route-id="@node.Id">View</a></td>
+        </tr>
+    }
+</table>

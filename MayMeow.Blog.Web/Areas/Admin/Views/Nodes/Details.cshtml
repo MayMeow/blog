@@ -1,0 +1,12 @@
+﻿@model MayMeow.Blog.Entities.Content.Node
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>@Model.Title <small>by @Model.Author.UserName</small></h2>
+
+<div>
+    @Model.Body
+</div>
