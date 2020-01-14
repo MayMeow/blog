@@ -1,0 +1,35 @@
+﻿@model MayMeow.Blog.Entities.Content.Node
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<div class="row justify-content-md-center">
+    <div class="col-md-9">
+        <div class="card-body px-md-5">
+            <h1>
+                @Model.Title
+            </h1>
+            <span class="font-weight-light text-secondary">@Model.CreatedAt</span>
+        </div>
+    </div>
+</div>
+
+@if (Model.FeaturedImage != null)
+{
+    <div class="row justify-content-md-center">
+        <div class="col-md-12">
+            <img src="@Model.FeaturedImage" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+}
+
+
+<div class="row justify-content-md-center">
+    <div class="col-md-9" style="font-size: 1.3em">
+        <div class="card-body px-md-5">
+            <markdown markdown="Body" />
+        </div>
+    </div>
+</div>

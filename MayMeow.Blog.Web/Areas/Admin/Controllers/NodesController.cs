@@ -55,7 +55,7 @@ namespace MayMeow.Blog.Web.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Title", "Body")] Node node)
+        public async Task<IActionResult> Create([Bind("Title", "Body", "FeaturedImage")] Node node)
         {
             var date = DateTime.UtcNow;
             if (!ModelState.IsValid) return View(node);

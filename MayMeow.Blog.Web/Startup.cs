@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MayMeow.AspNetCore.Markdown;
 using MayMeow.Blog.Data;
 using MayMeow.Blog.Entities.Identity;
 using Microsoft.AspNetCore.Builder;
@@ -38,6 +39,8 @@ namespace MayMeow.Blog.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            
+            services.AddSingleton<IMarkdownParser, MarkdownParserService>(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
